@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>User Management</h1>
+        <button id="addUserBtn">Add User</button>
+        <table id="userTable">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Username</th>
+                    <th>Email</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Users will be dynamically inserted here -->
+            </tbody>
+        </table>
+
+        <!-- User Form Modal -->
+        <div id="userFormModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <form id="userForm">
+                    <input type="hidden" id="userId">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" required>
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" required>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" required>
+                    <button type="submit">Save</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
